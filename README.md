@@ -1,15 +1,36 @@
-# JavaOSC
+# Benchmarking and Performance Analysis Tool
 
-The Benchmarking and Performance Analysis Tool is a practical Java-based desktop application designed to evaluate browser and CPU performance across Linux and macOS systems. Inspired by real-world optimization workflows and performance engineering concepts demonstrated by Alex Ziskind, the project focuses on analyzing realistic workloads instead of relying only on synthetic benchmark scores.
+A Java 21 desktop application for benchmarking browser and CPU performance on macOS and Linux. The app uses Swing for the desktop dashboard, modular benchmark adapters for realistic workloads, concurrent execution utilities, and a persistent local benchmark database for historical reporting.
 
-The application combines Java Swing for the graphical user interface, core Java logic for benchmark execution, Spring-based utilities for modular architecture, and database integration for persistent storage and analytical reporting. Swing provides a lightweight and responsive desktop interface capable of displaying live benchmark metrics, execution graphs, CPU utilization statistics, browser responsiveness, and workload comparisons in real time.
+## Features
 
-The core benchmarking engine uses multithreading, concurrency utilities, and JDK system accessibility features to monitor execution timing, memory allocation, thread efficiency, and hardware resource utilization. The system benchmarks browser rendering speed, JavaScript execution, startup latency, concurrent task handling, token generation speed, and CPU-intensive operations such as parsing, decompilation, compression, and processing of industry-standard compiled formats.
+- Live Swing dashboard with execution log, metric table, history table, and graph panel.
+- CPU workloads for parsing, compression, token generation, and concurrent task scheduling.
+- Browser probes for startup latency and responsiveness using installed browser executables.
+- Hardware profile capture including OS, architecture, JVM, CPU count, memory, and system load.
+- Persistent benchmark history stored in `data/benchmark-history.tsv`.
+- Regression analysis comparing new runs against historical averages.
+- Build-tool-free workflow using `javac` plus an optional Maven `pom.xml` for IDE/Spring Boot evolution.
 
-Database integration is implemented using Spring Boot with JDBC or Hibernate, enabling the application to store benchmark history, hardware profiles, execution logs, statistical averages, and regression analysis data. This allows users to compare historical performance trends across multiple devices, operating systems, browser versions, and workload configurations. Persistent storage also supports scalable report generation and future analytical extensions.
+## Run
 
-The architecture is designed with scalability and flexibility in mind. Modular benchmark adapters, reusable service layers, and database-driven configurations allow future expansion into distributed benchmarking systems, cloud synchronization, AI-assisted optimization analysis, and automated performance regression tracking.
+```bash
+./scripts/run.sh
+```
 
-Overall, the project demonstrates practical application of Java in systems programming, desktop UI development, database integration, concurrency management, benchmarking science, and scalable software architecture while solving real-world developer and performance engineering challenges in a cross-platform environment.
+Or compile manually:
 
+```bash
+javac -d out $(find src/main/java -name "*.java")
+java -cp out com.javaosc.benchmark.BenchmarkingPerformanceTool
+```
 
+## Architecture
+
+- `benchmark`: orchestration contracts and runner.
+- `benchmark/tasks`: modular benchmark adapters.
+- `service`: analysis, reporting, hardware profile, and system metrics services.
+- `persistence`: repository abstraction and file-backed local database.
+- `ui`: Swing dashboard and graph visualization.
+
+The code is intentionally modular so Spring Boot, JDBC, Hibernate, or a remote reporting service can be introduced behind the existing service and repository boundaries without rewriting the desktop UI or benchmark adapters.

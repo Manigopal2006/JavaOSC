@@ -1,0 +1,19 @@
+run_id	benchmark_name	category	score	unit	duration_ms	memory_delta_bytes	thread_count	cpu_load	success	message	started_at
+3454fd85-6f7e-4c01-9724-0e80e3471873	Structured Parsing	CPU	3779400.0	objects/sec	2009	38968264	7	0.20603015075376885	true	Checksum 2790662536370	2026-05-18T19:42:08.362762Z
+3454fd85-6f7e-4c01-9724-0e80e3471873	Compiled Format Compression	CPU	184.74384307861328	MiB/sec	2011	4805280	7	0.24489795918367346	true	386 compression passes	2026-05-18T19:42:10.400648Z
+3454fd85-6f7e-4c01-9724-0e80e3471873	Token Generation	CPU	4347878.0	tokens/sec	2002	30972464	7	0.16901408450704225	true	Last token c74d7f7fd842	2026-05-18T19:42:12.417588Z
+3454fd85-6f7e-4c01-9724-0e80e3471873	Concurrent Task Handling	Concurrency	66248.0	tasks/sec	2000	324808	15	0.6437768240343348	true	132496 futures completed	2026-05-18T19:42:14.423261Z
+3454fd85-6f7e-4c01-9724-0e80e3471873	Browser Startup Probe	Browser	12.345679012345679	startup-index	90	497384	16	0.6056338028169014	true	Google Chrome responded in 81 ms	2026-05-18T19:42:16.428730Z
+3454fd85-6f7e-4c01-9724-0e80e3471873	Browser Responsiveness	Browser	7.898450266E9	ops/sec	2000	76448	16	NaN	true	Google Chrome local rendering workload simulation	2026-05-18T19:42:16.529164Z
+93026a39-0f78-4af2-ab4a-17936155552f	Structured Parsing	CPU	3754200.0	objects/sec	2011	3856936	7	NaN	true	Checksum 3999449972672	2026-05-18T19:42:31.524211Z
+93026a39-0f78-4af2-ab4a-17936155552f	Compiled Format Compression	CPU	185.22245407104492	MiB/sec	2007	5399752	7	0.23333333333333334	true	387 compression passes	2026-05-18T19:42:33.553624Z
+93026a39-0f78-4af2-ab4a-17936155552f	Token Generation	CPU	4512124.5	tokens/sec	2000	35164432	7	0.3333333333333333	true	Last token 9b2223aac7da	2026-05-18T19:42:35.564687Z
+93026a39-0f78-4af2-ab4a-17936155552f	Concurrent Task Handling	Concurrency	81128.0	tasks/sec	2000	20100128	15	0.5671641791044776	true	162256 futures completed	2026-05-18T19:42:37.568498Z
+93026a39-0f78-4af2-ab4a-17936155552f	Browser Startup Probe	Browser	26.31578947368421	startup-index	41	637040	16	0.3225806451612903	true	Google Chrome responded in 38 ms	2026-05-18T19:42:39.571888Z
+93026a39-0f78-4af2-ab4a-17936155552f	Browser Responsiveness	Browser	8.815851219E9	ops/sec	2000	249424	16	NaN	true	Google Chrome local rendering workload simulation	2026-05-18T19:42:39.616697Z
+28da770e-60d0-4ea8-9e42-82452bc4a8f1	Structured Parsing	CPU	3621000.0	objects/sec	2007	99476056	14	0.14705882352941177	true	Checksum 6051456757010	2026-05-18T20:11:38.830475Z
+28da770e-60d0-4ea8-9e42-82452bc4a8f1	Compiled Format Compression	CPU	190.9657859802246	MiB/sec	2007	13621736	14	0.18446601941747573	true	399 compression passes	2026-05-18T20:11:40.842704Z
+28da770e-60d0-4ea8-9e42-82452bc4a8f1	Token Generation	CPU	4598315.0	tokens/sec	2000	62017480	14	0.391304347826087	true	Last token 5bc5fa89132b	2026-05-18T20:11:42.854479Z
+28da770e-60d0-4ea8-9e42-82452bc4a8f1	Concurrent Task Handling	Concurrency	81032.0	tasks/sec	2000	12188840	22	0.44505494505494503	true	162064 futures completed	2026-05-18T20:11:44.859476Z
+28da770e-60d0-4ea8-9e42-82452bc4a8f1	Browser Startup Probe	Browser	2.109704641350211	startup-index	478	794712	23	0.1111111111111111	true	Google Chrome responded in 474 ms	2026-05-18T20:11:46.864434Z
+28da770e-60d0-4ea8-9e42-82452bc4a8f1	Browser Responsiveness	Browser	8.967146062E9	ops/sec	2000	696608	23	NaN	true	Google Chrome local rendering workload simulation	2026-05-18T20:11:47.351252Z
